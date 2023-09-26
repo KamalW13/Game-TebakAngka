@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Game Tebak Angka</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="playSound">
+        <i class="fa-solid fa-volume-xmark"></i>
+        <i class="fa-solid fa-volume-high hiddenIcon"></i>
+    </div>
+    <audio loop src="sound/backsound.mp3" class="backsound"></audio>
+    <audio src="sound/sfx_button.wav" hidden class="sfxButton"></audio>
+    <audio src="sound/sfx_level.wav" hidden class="sfxLevel"></audio>
+
+
+    <!-- PAGE -->
+    <section class="home fadeIn">
+        <img src="img/JudulGames.png" width="350" alt="Judul">
+        <div class="button-start">
+            START
+        </div>
+        <footer>@copyright by Kamal</footer>
+    </section>
+
+    <section class="select-level fadeOut">
+        <div class="centered-box">
+            <span class="judul">Pilih Level: </span>
+            <div class="select">
+                <div class="level" data-range="1 - 10" data-max="10">
+                    1
+                </div>
+                <div class="level" data-range="1 - 50" data-max="50">
+                    2
+                </div>
+                <div class="level" data-range="1 - 100" data-max="100">
+                    3
+                </div>
+            </div>
+            <div class="back-button">
+                <i class="fa-solid fa-caret-left"></i>
+                Kembali
+            </div>
+        </div>
+    </section>
+
+    <section class="play-game fadeOut">
+        <audio src="sound/correct.mp3" class="correct_answer"></audio>
+        <audio src="sound/wrong.wav" class="wrong_answer"></audio>
+        <div class="back-button">
+            <i class="fa-solid fa-caret-left"></i>
+            Kembali
+        </div>
+        <div class="deskripsi">
+            *Tebak Angka antara (<span class="range">1 - 10</span>)
+        </div>
+        <div class="acak-angka">
+            <div class="closeAnswer">?</div>
+            <span class="angka">50</span>
+        </div>
+        <form class="input">
+            <input type="number" class="inputUser" required>
+            <button class="submit-button submit">
+                <i class="fa-solid fa-rotate reset hidden"></i>
+                <i class="fa-solid fa-caret-right submit"></i>
+            </button>
+        </form>
+        <div class="hasil">
+            <div class="info">
+                <div class="hasil-jawaban">Jawaban Benar!</div>
+                <div class="restart">Lanjut</div>
+            </div>
+        </div>
+    </section>
+    <!-- END PAGE -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

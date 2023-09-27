@@ -337,3 +337,20 @@ section{
     background-color: white;
     color: var(--color-primary);
 }
+
+
+
+@media (max-width: 576.98px) {
+    .home img{
+        width: 300px;
+    }
+
+    .select-level .select .level{
+        width: 110px;
+        height: 110px;
+    }
+
+    .centered-box{
+        padding: 10px;
+    }
+}

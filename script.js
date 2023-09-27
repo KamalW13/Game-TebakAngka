@@ -86,7 +86,7 @@ function correctAnswer() { // Fungsi Ketika Jawaban User Benar [Page: PLAY GAME]
     }, 100);
 }
 function mengacakAngka() { // Fungsi untuk Mengacak angka [Page: PLAY GAME]
-    randomAngka = Math.round(Math.random() * (maximalNumber - 1 + 1) + 1);
+    randomAngka = Math.round(Math.random() * (maximalNumber - 1) + 1);
     console.log(randomAngka);
     acakAngka.innerHTML = randomAngka;
 }
